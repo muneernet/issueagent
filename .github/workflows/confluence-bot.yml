@@ -26,4 +26,9 @@ jobs:
           CONFLUENCE_TOKEN: ${{ secrets.CONFLUENCE_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
+          echo ${{ secrets.GITHUB_TOKEN }}
+          echo ${{ secrets.CONFLUENCE_BASE }}
+          echo  ${{ secrets.CONFLUENCE_USER }}
+          echo ${{ secrets.CONFLUENCE_TOKEN }}
+          echo ${{ secrets.OPENAI_API_KEY }}
           python .github/scripts/confluence_responder.py
